@@ -52,10 +52,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       }
 
       const getStatus = (value: number): string => {
-        return value === 0 ? 'Não Teve' : value === 1 ? 'Teve' : 'Status Indefinido';
+        return value === 0 ? 'Não' : value === 1 ? 'Sim' : 'Status Indefinido';
       };
       const getStatusDesconto = (value: number): string => {
-        return value === 1 ? 'Não Teve' : value === 0.10 ? '10%' : value === 0.15 ? '15%' : value === 0.20 ? '20%' : value === 0.50 ? '50%' : 'Status Indefinido';
+        return value === 1 ? 'Não' : value === 0.10 ? '10%' : value === 0.15 ? '15%' : value === 0.20 ? '20%' : value === 0.50 ? '50%' : 'Status Indefinido';
       };
       const motorStatus = getStatus(body.Motor);
       const freioStatus = getStatus(body.Freio);
